@@ -58,7 +58,7 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl py-2 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl py-2 px-4 sm:px-6 lg:px-4">
           <div className="mt-6 flex flex-wrap justify-center gap-8">
             {[
               {
@@ -105,7 +105,7 @@ export default function Index() {
               <a
                 key={img.href}
                 href={img.href}
-                className="flex h-16 w-32 justify-center p-1 grayscale transition hover:grayscale-0 focus:grayscale-0"
+                className="flex h-14 w-32 justify-center p-1 grayscale transition hover:grayscale-0 focus:grayscale-0"
               >
                 <img alt={img.alt} src={img.src} />
               </a>
