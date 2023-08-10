@@ -2,7 +2,6 @@ import bcrypt from "bcryptjs";
 import { createClient } from "@supabase/supabase-js";
 import invariant from "tiny-invariant";
 
-export type User = { id: string; email: string };
 
 // Abstract this away
 const supabaseUrl = process.env.SUPABASE_URL;

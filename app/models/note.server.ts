@@ -1,12 +1,6 @@
-import type { User } from "./user.server";
+import { Note } from "~/types/note";
 import { supabase } from "./user.server";
-
-export type Note = {
-  id: string;
-  title: string;
-  body: string;
-  profile_id: string;
-};
+import { User } from "~/types/user";
 
 export async function getNoteListItems({ userId }: { userId: User["id"] }) {
   const { data } = await supabase

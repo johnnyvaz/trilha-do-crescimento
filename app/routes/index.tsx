@@ -11,7 +11,7 @@ export default function Index() {
             <div className="absolute inset-0">
               <img
                 className="h-full w-full object-cover"
-                src="https://alexandremorelli.com.br/wp-content/uploads/2023/07/CAPA-ALETDC-1-1024x573.png"
+                src="/imagens/CAPA-ALETDC-1-1024x573.png"
                 alt="BTS playing on stage with the group leaving in action poses"
               />
               <div className="absolute inset-0 bg-[color:rgba(139,92,246,0.5)] mix-blend-multiply" />

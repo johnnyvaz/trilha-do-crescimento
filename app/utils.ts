@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useMatches } from "@remix-run/react";
-import type { User } from "./models/user.server";
+import { User } from "./types/user";
 
 export function useMatchesData(id: string) {
   const matchingRoutes = useMatches();
