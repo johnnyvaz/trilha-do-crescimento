@@ -3,9 +3,9 @@ import { Link } from "@remix-run/react";
 export default function NoteIndexPage() {
   return (
     <p>
-      No note selected. Select a note on the left, or{" "}
+      Tarefa não selecionada, ou crie uma nova - {" "}
       <Link to="new" className="text-blue-500 underline">
-        create a new note.
+        Criar nova tarefa
       </Link>
     </p>
   );

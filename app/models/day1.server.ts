@@ -1,23 +1,23 @@
-import { Note } from "~/types/note";
+import { Day1 } from "~/types/day1";
 import { supabase } from "./user.server";
 import { User } from "~/types/user";
 
-export async function getNoteListItems({ userId }: { userId: User["id"] }) {
+export async function getDay1ListItems({ userId }: { userId: User["id"] }) {
   const { data } = await supabase
-    .from("notes")
+    .from("day1")
     .select("id, title")
     .eq("profile_id", userId);
 
   return data;
 }
 
-export async function createNote({
+export async function createDay1({
   title,
   body,
   userId,
-}: Pick<Note, "body" | "title"> & { userId: User["id"] }) {
+}: Pick<Day1, "body" | "title"> & { userId: User["id"] }) {
   const { data, error } = await supabase
-    .from("notes")
+    .from("day1")
     .insert([{ title, body, profile_id: userId }])
     .single();
 
@@ -31,9 +31,9 @@ export async function createNote({
 export async function deleteNote({
   id,
   userId,
-}: Pick<Note, "id"> & { userId: User["id"] }) {
+}: Pick<Day1, "id"> & { userId: User["id"] }) {
   const { error } = await supabase
-    .from("notes")
+    .from("day1")
     .delete({ returning: "minimal" })
     .match({ id, profile_id: userId });
 
@@ -44,12 +44,12 @@ export async function deleteNote({
   return null;
 }
 
-export async function getNote({
+export async function getDay1({
   id,
   userId,
-}: Pick<Note, "id"> & { userId: User["id"] }) {
+}: Pick<Day1, "id"> & { userId: User["id"] }) {
   const { data, error } = await supabase
-    .from("notes")
+    .from("day1")
     .select("*")
     .eq("profile_id", userId)
     .eq("id", id)
@@ -61,6 +61,19 @@ export async function getNote({
       id: data.id,
       title: data.title,
       body: data.body,
+      question1: data.question1,
+      question2: data.question2,
+      question3: data.question3,
+      question4: data.question4,
+      question5: data.question5,
+      question6: data.question6,
+      question7: data.question7,
+      question8: data.question8,
+      question9: data.question9,
+      question10: data.question10,
+      question11: data.question11,
+      question12: data.question12,
+      question13: data.question13
     };
   }
 
