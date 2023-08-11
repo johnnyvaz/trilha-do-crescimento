@@ -61,6 +61,7 @@ export default function NotesPage() {
 function Header() {
   const user = useUser();
   return (
+    <div>
     <header className="flex items-center justify-between bg-slate-800 p-4 text-white">
       <h1 className="text-3xl font-bold">
         <Link to=".">Dia 1</Link>
@@ -75,5 +76,7 @@ function Header() {
         </button>
       </Form>
     </header>
+    <h1 className="text-center bg-red-400">VERSÃO DE TESTE - OS DADOS SERÃO EXCLUÍDOS POSTERIORMENTE</h1>
+    </div>
   );
 }
